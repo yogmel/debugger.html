@@ -72,6 +72,8 @@
   margin-bottom: calc(-1 * var(--devtools-splitter-bottom-width));
 
   cursor: ns-resize;
+
+  z-index: 10;
 }
 
 .split-box.disabled {
