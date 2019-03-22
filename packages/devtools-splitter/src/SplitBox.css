@@ -59,12 +59,12 @@
   margin-right: calc(-1 * var(--devtools-splitter-inline-end-width));
 
   cursor: ew-resize;
+  z-index: 11;
 }
 
 .split-box.horz > .splitter {
   /* prettier-ignore */
-  min-height: calc(var(--devtools-splitter-top-width) +
-    var(--devtools-splitter-bottom-width) + 1px);
+  min-height: var(--devtools-emphasized-horizontal-splitter-min-height);
   border-top-width: var(--devtools-splitter-top-width);
   border-bottom-width: var(--devtools-splitter-bottom-width);
 
@@ -73,7 +73,11 @@
 
   cursor: ns-resize;
 
-  z-index: 10;
+  z-index: 11;
+}
+
+.split-box.horz > .splitter:hover {
+  background-color: var(--theme-emphasized-splitter-color-hover);
 }
 
 .split-box.disabled {
